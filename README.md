@@ -1,19 +1,19 @@
 <img width="1893" height="891" alt="image" src="https://github.com/user-attachments/assets/e1c129a0-fb86-4aca-ad0d-90c1d4cfe50a" />
 <br/>
 
-🚩 SEOUL MUSICAL MARATHON 서울 뮤지컬 마라톤 2025 랜딩페이지 제작
-🔧 기술 스택: PHP, Javascript, CSS, HTML / cursor
+🚩 SEOUL MUSICAL MARATHON 서울 뮤지컬 마라톤 2025 랜딩페이지 제작 <br/>
+🔧 기술 스택: PHP, Javascript, CSS, HTML / cursor<br/> 
 🖥️ https://marathon-sepia.vercel.app/
 
 0. 헤더 header/nav menu(반응형)
 1. 메인 Index.php
-   - section1: 풀 스크린 마라톤 메인 배너
+   - section1: 풀 스크린 마라톤 메인 배너<br/>
      ㄴtext animate 효과 사용 
-   - section2: 대회개요
+   - section2: 대회개요<br/>
      ㄴtable
    - section3: 리더스 그룹 안내, 신청방법 안내
    - section4: 기념품 안내
-   - section5: 코스안내
+   - section5: 코스안내<br/>
      ㄴtab menu
 
 2. 서브메뉴
