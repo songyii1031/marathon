@@ -1,0 +1,271 @@
+/* ==============================================
+   헤더 드롭다운 네비게이션 스타일
+   ============================================== */
+
+/* 네비게이션 드롭다운 컨테이너 */
+.nav-dropdown {
+    position: relative;
+    display: inline-block;
+}
+ 
+/* 메인 메뉴 아이템 */
+.nav-menu-item {
+    display: inline-block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: #374151;
+    font-weight: 500;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-menu-item:hover {
+    color: #01B3BC;
+    border-bottom-color: #01B3BC;
+}
+
+.mobile-menu-close {
+    background-color: #fff;
+    color: #01b3bb;
+    border: none;
+    padding: 0;
+    font-size: 1.5rem;
+}
+
+
+ 
+
+/* 드롭다운 콘텐츠 */
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    min-width: 180px;
+    background-color: white;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    border: 1px solid #e5e7eb;
+}
+
+/* 호버 시 드롭다운 표시 */
+.nav-dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* 드롭다운 내부 링크 */
+.dropdown-content a {
+    display: block;
+    padding: 0.75rem 1.25rem;
+    text-decoration: none;
+    color: #4b5563;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.dropdown-content a:hover {
+    background-color: #f8fafc;
+    color: #01B3BC;
+    border-left-color: #01B3BC;
+}
+
+
+/* 반응형: 모바일에서는 드롭다운 숨김 */
+@media (max-width: 768px) {
+    .nav-dropdown {
+        display: none;
+    }
+}
+
+/* 헤더 전체 스타일 개선 */
+#header {
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+/* 드롭다운 애니메이션 개선 */
+.dropdown-content {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+}
+
+.nav-dropdown:hover .dropdown-content {
+    animation-name: fadeInDown;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ==============================================
+   모바일 메뉴 스타일
+   ============================================== */
+
+/* 모바일 메뉴 오버레이 */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 모바일 메뉴 콘텐츠 */
+.mobile-menu-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    padding: 2rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-menu.open .mobile-menu-content {
+    transform: translateX(0);
+}
+
+/* 모바일 네비게이션 */
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* 모바일 네비게이션 아이템 */
+.mobile-nav-item {
+    border-bottom: 1px solid #f3f4f6;
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.mobile-nav-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+/* 모바일 네비게이션 헤더 */
+.mobile-nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    cursor: pointer;
+}
+
+.mobile-nav-title {
+    font-weight: 600;
+    color: #374151;
+    font-size: 1rem;
+}
+
+.mobile-nav-title-only {
+    display: block;
+    padding: 0.75rem 0;
+    font-weight: 600;
+    color: #374151;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.mobile-nav-title-only:hover {
+    color: #01B3BC;
+}
+
+/* 모바일 드롭다운 토글 버튼 */
+.mobile-dropdown-toggle {
+    background: none;
+    border: none;
+    color: #9ca3af;
+    padding: 0.25rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mobile-dropdown-toggle:hover {
+    color: #01B3BC;
+}
+
+.mobile-nav-item.active .mobile-dropdown-toggle {
+    transform: rotate(180deg);
+    color: #01B3BC;
+}
+
+/* 모바일 드롭다운 콘텐츠 */
+.mobile-dropdown-content {
+    display: none;
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.mobile-nav-item.active .mobile-dropdown-content {
+    display: block;
+    animation: mobileDropdownSlide 0.3s ease;
+}
+
+@keyframes mobileDropdownSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 모바일 네비게이션 링크 */
+.mobile-nav-link {
+    display: block;
+    padding: 0.5rem 0;
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+    border-left: 2px solid transparent;
+    padding-left: 0.75rem;
+}
+
+.mobile-nav-link:hover {
+    color: #01B3BC;
+    border-left-color: #01B3BC;
+}
+
+/* 반응형: 데스크톱에서는 모바일 메뉴 숨김 */
+@media (min-width: 769px) {
+    .mobile-menu {
+        display: none;
+    }
+}
