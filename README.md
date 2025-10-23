@@ -16,12 +16,12 @@
    - section5: 코스안내<br/>
      ㄴtab menu
 
-2. 서브메뉴
-   page01. 대회개요
-   page02. 집결지 안내
-   page03. 기념품
-   page04. 코스 -10KM / Half
-   page05. 참가접수(form)
+2. 서브메뉴<br/>
+   page01. 대회개요<br/>
+   page02. 집결지 안내<br/>
+   page03. 기념품<br/>
+   page04. 코스 -10KM / Half<br/>
+   page05. 참가접수(form)<br/>
    
 all. footer / top button
 
