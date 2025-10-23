@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>집결지 안내 - Seoul Musical Marathon</title>
+    
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEOUL MUSICAL MARATHON 2025</title> 
+    <meta name="description" content="2025 서울 뮤지컬 마라톤 - 10km, Half Marathon 코스로 진행되는 한국 최고의 음악 축제">
+    
+    <!-- 파비콘 -->
+    <link rel="icon" type="image/x-icon" href="../config/img/favicon.ico">
+    <link rel="shortcut icon" href="../config/img/favicon.ico">
+
+    <!-- 스타일시트 -->
+     <link rel="stylesheet" href="../config/css/styles.css">   
+     <link rel="stylesheet" href="../config/css/custom.css">   
+     <link rel="stylesheet" href="../config/css/font.css">    
+     <link rel="stylesheet" href="../config/css/header.css">   
+     <link rel="stylesheet" href="../config/css/responsive.css">   
+     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+        <!-- Header -->
+        <header id="header" class="bg-white sticky top-0 z-50">
+            <div class="header_wrapper_div mx-auto px-4 py-4"> 
+                <div class="header_flex_div flex space-x-8"> 
+                    <a href="../index.php.html#home"><img src="../config/img/logo.png" alt="logo" style="width: 90px;"></a>
+                     
+                     <nav class="hidden md:flex space-x-8">
+                         <!-- 대회안내 -->
+                         <div class="nav-dropdown">
+                             <a href="overview.php.html" class="nav-menu-item">대회안내</a>
+                             <div class="dropdown-content">
+                                 <a href="overview.php.html">대회개요</a>
+                                 <a href="location.php.html">집결지 안내</a>
+                             </div>
+                         </div>
+                         
+                         <!-- 기념품 -->
+                         <div class="nav-dropdown">
+                             <a href="reward.php.html" class="nav-menu-item">기념품</a>  
+                         </div>
+                         
+                         <!-- 코스 -->
+                         <div class="nav-dropdown">
+                             <a href="course_10km.php.html" class="nav-menu-item">코스</a>
+                             <div class="dropdown-content">
+                                 <a href="course_10km.php.html">10km 코스</a>
+                                 <a href="course_half.php.html">하프 마라톤</a>
+                             </div>
+                         </div>
+                         
+                         <!-- 참가접수 -->
+                         <div class="nav-dropdown">
+                             <a href="form.php.html" class="nav-menu-item">참가접수</a>
+                         </div>
+                         
+                         <!-- 커뮤니티 -->
+                         <div class="nav-dropdown">
+                             <a href="../index.php.html#community" class="nav-menu-item">커뮤니티</a>
+                             <div class="dropdown-content">
+                                 <a href="../index.php.html#com1">공지사항</a>
+                                 <a href="../index.php.html#com2">FAQ</a>
+                             </div>
+                         </div>
+                     </nav>
+
+                    <div class="participateDiv items-center space-x-4">
+                        <button class="participateBtn btn btn-primary hidden">
+                            참가신청
+                        </button>
+                        <button id="mobile-menu-btn" class="md:hidden btn btn-ghost p-2">
+                            <i data-lucide="menu" style="width: 2.2rem; height: 2.2rem;"></i>
+                            <span class="sr-only">메뉴 열기</span>
+                        </button>
+                    </div>
+                </div> 
+            </div>
+        </header>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="mobile-menu">
+            <div class="mobile-menu-content">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-lg font-bold">메뉴</h2>
+                    <button id="mobile-menu-close" class="mobile-menu-close">
+                        X
+                    </button>
+                </div>
+                
+                <!-- 모바일 네비게이션 메뉴 -->
+                <nav class="mobile-nav">
+                    <!-- 대회안내 -->
+                    <div class="mobile-nav-item">
+                        <div class="mobile-nav-header">
+                            <span class="mobile-nav-title">대회안내</span>
+                            <button class="mobile-dropdown-toggle">
+                                <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                        <div class="mobile-dropdown-content">
+                            <a href="overview.php.html" class="mobile-nav-link">대회개요</a>
+                            <a href="../index.php.html#info2" class="mobile-nav-link">오시는 길</a>
+                        </div>
+                    </div>
+
+                    <!-- 기념품 -->
+                    <div class="mobile-nav-item">
+                        <a href="../index.php.html#goods" class="mobile-nav-title-only">기념품</a>
+                    </div>
+
+                    <!-- 코스 -->
+                    <div class="mobile-nav-item">
+                        <div class="mobile-nav-header">
+                            <span class="mobile-nav-title">코스</span>
+                            <button class="mobile-dropdown-toggle">
+                                <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                        <div class="mobile-dropdown-content">
+                            <a href="course_10km.php.html" class="mobile-nav-link">10km 코스</a>
+                            <a href="course_half.php.html" class="mobile-nav-link">하프 마라톤</a>
+                        </div>
+                    </div>
+
+                    <!-- 참가접수 -->
+                    <div class="mobile-nav-item">
+                        <div class="mobile-nav-header">
+                            <span class="mobile-nav-title">참가접수</span>
+                            <button class="mobile-dropdown-toggle">
+                                <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                        <div class="mobile-dropdown-content">
+                            <a href="form.php.html" class="mobile-nav-link">신청하기</a>
+                            <a href="../index.php.html#reg2" class="mobile-nav-link">공지사항</a>
+                        </div>
+                    </div>
+
+                    <!-- 커뮤니티 -->
+                    <div class="mobile-nav-item">
+                        <div class="mobile-nav-header">
+                            <span class="mobile-nav-title">커뮤니티</span>
+                            <button class="mobile-dropdown-toggle">
+                                <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                        <div class="mobile-dropdown-content">
+                            <a href="../index.php.html#com1" class="mobile-nav-link">공지사항</a>
+                            <a href="../index.php.html#com2" class="mobile-nav-link">FAQ</a>
+                            <a href="../index.php.html#com3" class="mobile-nav-link">문의하기</a>
+                        </div>
+                    </div>
+                </nav>
+                
+                <div class="pt-4 border-t mt-6">
+                    <button class="btn btn-primary w-full">
+                        참가신청
+                    </button>
+                </div>
+            </div>
+        </div>
+</body>
+</html>    <style>
+        /* 커서 경로 수정 (서브 페이지용) */
+        * {
+            cursor: url('../config/img/cursor.png') 10 10, auto !important;
+        }
+        
+        body {
+            cursor: url('../config/img/cursor.png') 10 10, default !important;
+        }
+        
+        a, button, input[type="submit"], input[type="button"], .btn {
+            cursor: url('../config/img/cursor.png') 10 10, auto !important;
+        }
+    </style>
+    <style>
+        /* 집결지 안내 섹션 스타일 */
+    
+        
+        .location-container {
+            text-align: center;
+        }
+        
+        .location-image-wrapper {
+            border-radius: 18px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+            overflow: hidden;
+            display: inline-block;
+            max-width: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+         
+        .location-image {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-width: 800px;
+        }
+        
+        /* 반응형 디자인 */
+        @media (max-width: 768px) {
+            .location-section {
+                padding: 2rem 0;
+            }
+  
+            .location-image-wrapper {
+                border-radius: 12px;
+                margin: 0 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+    
+            
+            .location-image-wrapper {
+                border-radius: 8px;
+                margin: 0 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen">
+        <main>
+            <!-- 집결지 안내 -->   
+            <section id="location_wrapper" class="location-section fst-section"> 
+                <h2 class="title_h2">집결지 안내</h2>
+                <div class="container mx-auto px-4 location-container" >
+                     <div class="location-image-wrapper">
+                         <img class="location-image" src="../config/img/location.png" alt="집결지 안내" >
+                     </div>
+                </div>
+            </section>
+        </main>
+
+     
+                <!-- Footer -->
+        <footer class="footer">
+            <div class="container mx-auto px-4">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3 class="footer-title">SEOUL MARATHON</h3>
+                        <p class="footer-description">
+                            한국 최고의 음악 스포츠 축제로 여러분을 초대합니다.
+                        </p>
+                        <div class="social-links">
+                            <i data-lucide="facebook" class="social-icon"></i>
+                            <i data-lucide="instagram" class="social-icon"></i>
+                            <i data-lucide="youtube" class="social-icon"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4 class="footer-subtitle">이벤트 정보</h4>
+                        <ul class="footer-links">
+                            <li><a href="../index.php.html#home">대회안내</a></li>
+                            <li><a href="../index.php.html#goods">기념품</a></li>
+                            <li><a href="../index.php.html#course">코스안내</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4 class="footer-subtitle">고객 지원</h4>
+                        <ul class="footer-links">
+                            <li><a href="location.php.html#">자주 묻는 질문</a></li>
+                            <li><a href="location.php.html#">환불 정책</a></li> 
+                            <li><a href="location.php.html#">분실물 센터</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4 class="footer-subtitle">연락처</h4>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i data-lucide="map-pin" class="contact-icon"></i>
+                                <span>서울특별시 중구 광화문로 25</span>
+                            </div>
+                            <div class="contact-item">
+                                <i data-lucide="phone" class="contact-icon"></i>
+                                <span>02-123-4567</span>
+                            </div>
+                            <div class="contact-item">
+                                <i data-lucide="mail" class="contact-icon"></i>
+                                <span>info@seoulmarathon.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Seoul Marathon. All rights reserved.</p>
+                    <p class="demo-notice">본 사이트는 데모 목적으로 제작되었습니다.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../config/js/script.js"></script>
+    <script src="../config/js/animation.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        console.log('✅ 간단한 PHP 페이지 로드 성공!');
+        console.log('📅 현재 연도: 2025');
+    </script>
+</body>
+</html>

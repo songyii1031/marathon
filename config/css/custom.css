@@ -1,0 +1,813 @@
+/* header section start */
+
+.hero-section {
+    width: 100%;
+}
+ 
+.bannerDiv {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.bannerDiv img {
+    width: 100%;
+    height: 100%;
+}
+
+.header_flex_div {
+    justify-content: space-between;
+}
+ 
+.header_wrapper_div {
+    box-shadow: 0px 5px 1px #01b3bb;
+    border-radius: 14px;
+}
+
+.md\:flex {
+    align-items: center; 
+    gap: 3rem;
+}
+
+nav a {
+    color: #000000;
+    font-size: 1.6rem;
+    font-family: 'Paperozi700'; 
+}
+nav a:hover {
+    color: #b3c7c8;
+}
+
+.hero-title {
+    margin-top: 20px;
+    line-height: 1.2;
+    color: #ffffffcf;
+    font-family: 'PartialSans'; 
+    font-weight: 400; 
+}
+
+.participateBtn {
+    display: block; 
+    min-width: 120px;
+}
+
+.participateDiv { 
+    padding-top: 7px; 
+    text-align: center;
+}
+
+.participateDiv:hover button {
+    color: #b3c7c8;
+}
+
+.participateBtn.btn-primary {
+    background-color: initial;
+    color: #01B3BC;
+    font-family: 'PartialSans';
+    font-size: 30px;
+    font-weight: 300;
+    vertical-align: -3px;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 15px 25px;
+}
+
+/* header section end */
+
+/* Animation Styles */
+
+/* 페이지 로더 (비활성화됨) */
+.page-loader {
+    display: none !important; /* 완전히 숨김 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #01B3BC 0%, #0891b2 100%);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loader-content {
+    text-align: center;
+    color: white;
+}
+
+.loader-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+.loader-content p {
+    font-family: 'Paperozi700', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-top: 20px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.loader-fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+/* 헤더 고정 스타일 (스크롤 효과 제거) */
+
+/* 플로팅 애니메이션 제거 */
+
+/* 키프레임 정의 */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* 플로팅 애니메이션 (성능 개선) */
+.floating {
+    animation: floating 3s ease-in-out infinite;
+    will-change: transform; /* GPU 가속 */
+    backface-visibility: hidden; /* 성능 최적화 */
+}
+
+
+
+/* 스크롤바 스타일링 */
+::-webkit-scrollbar {
+    
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #01B3BC, #0891b2);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #0891b2, #01B3BC);
+}
+
+
+
+
+/* 대회개요 */
+.event-info-section {
+    padding: 4rem 0;
+    background-color: #f8fafc;
+}
+
+.event-info-card {
+    background: white;
+    border-radius: 20px;
+    padding: 1rem 3rem;
+    box-shadow: 0 10px 15px rgb(132 132 132 / 50%);
+    max-width: 800px;
+    margin: 0 auto; 
+    position: relative;
+    filter: 
+    drop-shadow(0 3px 4px rgba(0, 0, 0, 0.12)) 
+    drop-shadow(0 3px 3px rgba(0, 0, 0, 0.14)) 
+    drop-shadow(0 1px 8px rgba(0, 0, 0, 0.12)) 
+    drop-shadow(0 -2px 2px rgba(0, 0, 0, 0.1));
+}
+
+.event-info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 100%;
+    background: linear-gradient(45deg, #9fb9ba, #fff);
+    border-radius: 0 17px 17px 0;
+}
+
+.event-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    border-bottom: 2px solid #f3f4f6;
+    padding-bottom: 2rem;
+}
+
+.event-title {
+    font-size: 2.5rem; 
+    margin-top: 1rem;
+    font-family: 'Paperozi700', sans-serif;
+    letter-spacing: -2.5px;
+}
+
+.asia-text {
+    color: #01B3BC;
+}
+
+.open-text {
+    color: #01B3BC;
+}
+
+.marathon-text {
+    color: #01B3BC;
+}
+ 
+.event-details {
+    margin-bottom: 2rem;
+}
+
+.detail-row {
+    display: flex;
+    align-items: flex-start; 
+    border-bottom: 1px solid #f3f4f6;
+    padding-bottom: 1rem;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.detail-label {
+    background: #01B3BC;
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1.3rem;
+    min-width: 110px;
+    text-align: center;
+    margin-right: 2rem;
+    flex-shrink: 0;
+}
+
+.detail-value {  
+    padding-top: 0.5rem;
+    font-size: 1.2rem;
+    letter-spacing: -0.8px;
+}
+
+.sponsor-seoul {
+    color: #10b981;
+    font-weight: 700;
+}
+
+.sponsor-m {
+    color: #01B3BC;
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+.event-notice {
+    text-align: center;
+    color: #01B3BC;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding-top: 1.5rem;
+    border-top: 1px solid #f3f4f6;
+}
+
+
+.section01 {
+    background-color: #ffffff;
+    background-image: url("../img/back_01.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    padding: 160px 0;
+}
+
+.section01 h2 {
+    margin-bottom: 20px;
+}
+
+
+
+
+/* 접근성을 위한 애니메이션 비활성화 옵션 */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .floating {
+        animation: none;
+    }
+}
+
+/* ==========================================
+   Leaders Section (리더스 그룹)
+   ========================================== */
+
+.section02 {
+    background-color: #ffffff;
+    background-image: url("../img/back_02.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    padding: 200px 0;
+}
+
+.leaders-section {
+    padding: 5rem 0;
+    background-color: #ffffff;
+}
+
+.leaders-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.leaders-header {
+    margin-bottom: 2rem;
+}
+
+.leaders-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.leaders-eng {
+    color: #ffffff;
+    font-size: 1.6rem;  
+    font-family: 'Paperozi700', sans-serif;
+}
+
+.leaders-kor {
+    color: #fff;
+    font-size: 3.2rem;
+    font-weight: 700;
+    font-family: 'Paperozi700', sans-serif;
+}
+
+.leaders-description {
+    margin-bottom: 2rem; 
+    line-height: 1.8;
+}
+ 
+.application-criteria {
+    margin-bottom: 4rem;
+}
+
+.criteria-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1.5rem 2rem;
+    background: linear-gradient(45deg, #000000, #ffffff00);
+    border-radius: 50px;
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 8px 25px rgb(19 109 103 / 31%);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.criteria-label {
+    font-size: 1.25rem;
+    font-weight: 700;
+    min-width: 80px;
+}
+
+.criteria-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex: 1;
+}
+
+.criteria-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.race-type {
+    font-weight: 700;
+    font-size: 1.1rem;
+    min-width: 50px;
+}
+
+.time-requirement {
+    font-size: 1rem;
+    opacity: 0.95;
+}
+
+.application-method {
+    margin-bottom: 3rem;
+}
+
+.method-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 3rem;
+    font-family: 'Paperozi700', sans-serif;
+}
+
+.method-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.step-item {
+    position: relative;
+    padding: 2rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid #f3f4f6;
+    transition: all 0.3s ease;
+}
+
+.step-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border-color: #01B3BC;
+}
+
+
+.step-number { 
+    width: 100%;
+    color: #01B3BC;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-family: 'PartialSans';
+    letter-spacing: 2px;
+}
+
+.step-content {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.step-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.step-desc {
+    color: #6b7280;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.submit-button-container {
+    text-align: center;
+}
+
+.submit-record-btn {
+    background: #ffffff00;
+    color: #01B3BC;
+    border: 2px solid #01B3BC; 
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    font-size: 1.7rem; 
+    cursor: pointer;
+    transition: all 0.3s ease;  
+    font-family: 'PartialSans';
+}
+
+.submit-record-btn:hover {
+    transform: translateY(-2px);
+    /* box-shadow: 0 12px 35px rgba(220, 38, 38, 0.4); */
+    background: #fff;
+}
+
+/* ==========================================
+   Gift Section (기념품)
+   ========================================== */
+
+.gift-section {
+   margin-top: 150px;
+}
+ 
+ .gift-card {
+     position: relative;
+     display: flex;
+     width: 100%;
+     padding: 70px 30px;
+     background-color: #ffffff;
+     border: 2px solid #01b3bc;
+     border-radius: 20px;
+     margin: 5rem 0;
+     align-items: center;
+     justify-content: space-evenly;
+     gap: 2rem;
+     flex-wrap: wrap;
+ }
+
+ .gift-image {
+     max-width: 100%;
+     height: auto;
+     object-fit: contain;
+     transition: transform 0.3s ease;
+ }
+
+ .gift-image:hover {
+     transform: scale(1.05);
+ }
+
+ img.gift_tshirt {
+     width: 20%;
+     min-width: 150px;
+     max-width: 200px;
+ }
+
+ img.gift_medal  {
+     width: 15%;
+     min-width: 120px;
+     max-width: 180px;
+ }
+
+ img.gift_sock {
+     width: 18%;
+     min-width: 130px;
+     max-width: 170px;
+ }
+ 
+ img.gift_ade {
+     width: 8%;
+     min-width: 80px;
+     max-width: 120px;
+ }
+
+ img.gift_energy {
+     width: 22%;
+     min-width: 160px;
+     max-width: 220px;
+ }
+
+/* ==========================================
+   Course Section (코스 안내) - Tab Box
+   ========================================== */
+
+.course-section {
+    padding: 5rem 0;
+    background-color: #f8fafc;
+}
+
+.course-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sec-header-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.sec-sub-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sec-txt-eng {
+    color: #01B3BC;
+    font-size: 1.6rem;
+    font-family: 'Paperozi700', sans-serif;
+    letter-spacing: 2px;
+}
+
+.sec-txt-kor {
+    color: #1f2937;
+    font-size: 3.2rem;
+    font-weight: 700;
+    font-family: 'Paperozi700', sans-serif;
+}
+
+/* Tab Container */
+.tab-container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.tab-buttons {
+    display: flex;
+    background: #f1f5f9;
+    border-radius: 20px 20px 0 0;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 1.5rem 2rem;
+    border: none;
+    background: transparent;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Paperozi700', sans-serif;
+    letter-spacing: 1px;
+}
+
+.tab-btn:first-child {
+    border-radius: 20px 0 0 0;
+}
+
+.tab-btn:last-child {
+    border-radius: 0 20px 0 0;
+}
+
+.tab-btn.active {
+    background: #01B3BC;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(1, 179, 188, 0.3);
+}
+
+.tab-btn:hover:not(.active) {
+    background: #e2e8f0;
+    color: #01B3BC;
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+    padding: 3rem;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Course Card */
+.course-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.course-info {
+    padding-right: 2rem;
+}
+
+.course-subtitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 2rem;
+    font-family: 'Paperozi700', sans-serif;
+}
+
+.course-details {
+    margin-bottom: 2rem;
+}
+
+.course-detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.course-detail-item:last-child {
+    border-bottom: none;
+}
+
+.course-detail-item .detail-label {
+    font-weight: 600;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.course-detail-item .detail-value {
+    color: #01B3BC;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.course-route {
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 15px;
+    border-left: 4px solid #01B3BC;
+}
+
+.course-route h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.course-route p {
+    color: #4b5563;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Course Map */
+.course-map {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.map-icon {
+    width: 48px;
+    height: 48px;
+    color: #64748b;
+    margin-bottom: 1rem;
+}
+
+.map-placeholder p {
+    color: #64748b;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.map-image {
+    width: 100%;        
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
+/* ======================
+    개별페이지 공통 style 
+=========================*/
+
+.title_h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 3rem;
+    font-family: 'Paperozi700', sans-serif;
+}
+
+.fst-section {
+    padding: 5rem 0;
+    background-color: #f8fafc;
+}
