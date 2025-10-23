@@ -1,4 +1,4 @@
-
+<img width="1893" height="891" alt="image" src="https://github.com/user-attachments/assets/e1c129a0-fb86-4aca-ad0d-90c1d4cfe50a" />
 🚩 SEOUL MUSICAL MARATHON 서울 뮤지컬 마라톤 2025 랜딩페이지 제작
 🖥️ 기술 스택: PHP, Javascript, CSS, HTML / cursor
 
@@ -21,4 +21,5 @@
    page05. 참가접수(form)
    
 all. footer / top button
+
 
